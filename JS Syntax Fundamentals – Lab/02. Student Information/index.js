@@ -1,3 +1,3 @@
-function solve(name,age,averageGrade){
-    console.log('Name: ${name}, Age: ${age}, Grade:${grade.toFixed(2)}')
+function averageGrade(name,age,grade){
+    console.log(`Name: ${name}, Age: ${age}, Grade: ${grade.toFixed(2)}`)
 }
