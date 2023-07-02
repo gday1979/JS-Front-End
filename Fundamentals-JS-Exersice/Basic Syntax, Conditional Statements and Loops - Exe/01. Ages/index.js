@@ -4,6 +4,7 @@ function ages(age){
     }
     else if(age>=3 && age <=13){
         console.log('child')
+        
     }
     else if(age>=14 && age<=19){
         console.log('teenager')
@@ -18,5 +19,6 @@ function ages(age){
     else{
         console.log("out of bounds")
     }
+
 }
-ages(16)
+ages(20);

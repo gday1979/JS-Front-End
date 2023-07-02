@@ -37,3 +37,4 @@ function calculateTicketPrice(day,age){
         return 'Error!';
     
 }
+calculateTicketPrice("Holiday",16)
