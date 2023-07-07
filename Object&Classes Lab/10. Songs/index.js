@@ -1,23 +1,25 @@
-function songs(){
-    class Song{
-        constructor(type, name, time){
-            this.type = type;
-            this.name = name;
-            this.time = time;
-        }
-        print(){
-            console.log(this.name);
+function songs(input) {
+    class Song {
+        constructor(typeList, name, time) {
+            this.typeList = typeList
+            this.name = name
+            this.time = time
         }
     }
-    let songsCount = Number(document.getElementById('songsCount').value);
-    let songs = [];
-    for (let i = 0; i < songsCount; i++) {
-        let [type, name, time] = document.getElementById(`song${i+1}`).value.split('_');
-        songs.push(new Song(type, name, time));
+
+    let songs = []
+    let numberOfSongs = input.shift()
+    let typeList = input.pop()
+
+    for (let i = 0; i < numberOfSongs; i++) {
+        let [type, name, time] = input[i].split('_')
+        songs.push(new Song(type, name, time))
     }
-    let type = document.getElementById('typeList').value;
-    if(type !== 'all'){
-        songs = songs.filter(x => x.type === type);
+
+    if (typeList === 'all') {
+        songs.forEach((i) => console.log(i.name))
+    } else {
+        let filtered = songs.filter((i) => i.typeList === typeList)
+        filtered.forEach((i) => console.log(i.name))
     }
-    songs.forEach(x => x.print());
 }
