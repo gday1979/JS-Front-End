@@ -4,7 +4,7 @@ function inventory(input) {
     for (let line of input) {
         let [name, level, items] = line.split(' / ');
         level = Number(level);
-        items = items.split(', ').sort((a, b) => a.localeCompare(b)).join(', ');
+        items = items.split(', ').join(', ');
 
         heroes.push({name, level, items});
     }
@@ -17,3 +17,4 @@ function inventory(input) {
         console.log(`items => ${hero.items}`);
     }
 }
+inventory(['Isacc / 25 / Apple, GravityGun',    'Derek / 12 / BarrelVest, DestructionSword',    'Hes / 1 / Desolator, Sentinel, Antara']);  
