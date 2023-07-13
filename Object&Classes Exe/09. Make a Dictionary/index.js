@@ -13,4 +13,3 @@ function makeADictionary(input) {
         [0]} => Definition: ${sorted[i][1]}`);
     }
 }
-makeADictionary(['{"Coffee":"A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub."}',
